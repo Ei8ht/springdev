@@ -6,23 +6,25 @@
 <head>
     <title>Hello Spring Boot!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+    <link href="../static/css/core.css"
+          th:href="@{/css/core.css}"
+          rel="stylesheet" media="screen" />
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
 </head>
 <body>
 <!-- Header -->
 <div>
-    <!-- ============================================================================ -->
-    <!-- This content is only used for static prototyping purposes (natural templates)-->
-    <!-- and is therefore entirely optional.                                           -->
-    <!-- ============================================================================ -->
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Static header</a>
-                <a class="navbar-brand" th:href="@{/logout}">logout</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
+                    <li class="active" ><a th:href="@{/logout}">Logout</a></li>
                 </ul>
             </div>
         </div>
