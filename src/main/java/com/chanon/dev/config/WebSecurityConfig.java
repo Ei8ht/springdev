@@ -17,4 +17,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.formLogin().and().httpBasic().and()
 		.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 	}
+	
+//	@Override
+//	public void configure(AuthenticationManagerBuilder auth) throws Exception {
+		// -------------------- Embed ldap ------------------- //
+//		auth.ldapAuthentication()
+//			.userDnPatterns("uid={0},ou=people")
+//			.groupSearchBase("ou=groups")
+//			.contextSource()
+//				.url("ldap://localhost:8389/dc=springframework,dc=org")
+//				.and()
+//			.passwordCompare()
+//				.passwordEncoder(new LdapShaPasswordEncoder())
+//				.passwordAttribute("userPassword");
+		
+		// -------------------- KTB ldap ------------------- //
+//		auth.ldapAuthentication()
+//			.userDnPatterns("uid={0},ou=people,o=ktb.co.th")
+//			.groupSearchBase("ou=people")
+//			.contextSource().url("ldap://10.2.63.76:602/o=kcs");
+//	}
+	
 }
