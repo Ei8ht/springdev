@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class InitialController {
 	private static final Logger logger = LogManager.getLogger();
-	@RequestMapping("/index")
-	public String initForm() {
+	@RequestMapping("/")
+	public String index() {
 		logger.debug("Debugging log");
 		logger.info("Info log");
 		logger.warn("Hey, This is a warning!");
