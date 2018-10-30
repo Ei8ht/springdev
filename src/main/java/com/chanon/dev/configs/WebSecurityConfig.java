@@ -1,4 +1,4 @@
-package com.chanon.dev.config;
+package com.chanon.dev.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -15,7 +15,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
-		.authorizeRequests().anyRequest().authenticated().and()
+//		.authorizeRequests().anyRequest().authenticated().and()
+		.authorizeRequests().antMatchers("/resources/**", "/signup", "/about").permitAll().and()
 		.formLogin().and().httpBasic().and()
 		.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 	}
